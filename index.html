@@ -8,20 +8,28 @@
   </head>
   <body>
     <header>
+        <div class="marquee">
+            <marquee onmouseover="this.stop();" onmouseout="this.start();" class="news-text" >
+
+              <p>Breaking News 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              
+
+            </marquee>
+        </div>
+      
       <div>
-        Lauftext
-      </div>
-      <div>
-        <ul>
-          <li><a href="index.html">[Home]</a></li>
-          <li><a href="index.html">[O2 Berechnung]</a></li>
-          <li><a href="index.html">[Notfall Quiz]</a></li>
-          <li><span id="invertButton">[Invert]</span></li>
-        </ul>
+        <nav>
+          <ul>
+            <li><a href="index.html" class="link-blue">[Home]</a></li>
+            <li><a href="index.html" class="link-blue">[O2 Berechnung]</a></li>
+            <li><a href="index.html" class="link-blue">[Notfall Quiz]</a></li>
+            <li><span id="invertButton" class="link-red">[Invert]</span></li>
+          </ul>
+        </nav>
       </div>
     </header>
     <main>
-      <h1>Rettungsdienstblog Notfall App</h1>
+      <h1 class="text-blue">Rettungsdienstblog <span class="text-red">Notfall App</span></h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ipsum ex odit tenetur reiciendis dicta optio earum provident vitae debitis? Et culpa accusantium ex ullam exercitationem totam quam sint! Natus?
       </p>

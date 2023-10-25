@@ -1,35 +1,134 @@
-
-
-body {
-  --color-black: #191919;
-  --color-grey: #6C7B8B;
-  --color-white: #e1e1e1;
-  --font: monospace;
-  --line: 3ch;
-  --font-scale: 0.2vw;
-}
+/*ANCHOR - Custom Properties */
 
 * {
   box-sizing: border-box;
 }
 
 body {
+  --color-black: #191919;
+  --color-grey: #6C7B8B;
+  --color-white: #e1e1e1;
+  --color-grey-hell: #B9D3EE;
+  --color-red: #FF0000;
+  --color-blue: #0000FF;
+  --font: monospace;
+  --font-italic: italic;
+  --line: 3ch;
+  --font-scale: 0.2vw;
+}
+
+body.invert {
+  --color-black: #B9D3EE;
+  --color-grey: #6C7B8B;
+  --color-white: #e1e1e1;
+  --color-grey-hell: #191919;
+  --color-red: #FF0000;
+  --color-blue: #1E90FF;
+  --font: monospace;
+  --font-italic: italic;
+  --line: 3ch;
+  --font-scale: 0.2vw;
+}
+
+
+/*ANCHOR - Main Style*/
+
+body {
   margin: 0;
   font-family: var(--font);
   font-weight: 400;
   font-style: normal;
-  font-size: calc(1rem + var(--font-scale));
+  font-size: calc(0.9rem + var(--font-scale));
   line-height: var(--line);
   color: var(--color-black);
-  background-color: var(--color-grey);
+  background-color: var(--color-grey-hell);
 }
+
 
 header, main, footer {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
+  padding: 5px;
 }
+
+/*ANCHOR - Content Style*/
 
 h1 {
   font-size: calc(1.8rem + var(--font-scale));
+  font-weight: 400;
+  font-style: var(--font-italic);
+}
+
+a {
+  text-decoration: none;
+  font-size: larger;
+}
+
+#invertButton {
+  cursor: pointer;
+  font-size: larger;
+}
+
+.text-red {
+  line-height: 4rem;
+  font-size: 50px;
+}
+
+/*ANCHOR - TextColor*/
+
+.text-red{
+  color: var(--color-red);
+}
+
+.text-blue{
+  color: var(--color-blue);
+}
+
+/*ANCHOR - Navigation */
+
+nav > ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/*ANCHOR - LinkColor*/
+
+.link-blue {
+  color: var(--color-blue);
+}
+
+.link-blue:hover {
+  color: var(--color-black);
+  background-color: var(--color-blue);
+}
+
+.link-red {
+  color: var(--color-red);
+}
+
+.link-red:hover {
+  color: var(--color-black);
+  background-color: var(--color-red);
+}
+
+/* ANCHOR - Scrolling TEXT/Style */ 
+
+.news-text {
+  background-color: var(--color-blue);
+  color: #e1e1e1;
+  height: 50px;
+  cursor: pointer;
+}
+
+.news-text:hover {
+  animation-play-state: paused;
+}
+
+.marquee {
+  font-size: calc(1.1rem + var(--font-scale));
+  
 }
