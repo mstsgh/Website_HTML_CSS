@@ -33,8 +33,10 @@ body.invert {
 
 /*ANCHOR - Main Style*/
 
+
+
 body {
-  margin: 0;
+  margin: 5px;
   font-family: var(--font);
   font-weight: 400;
   font-style: normal;
@@ -49,7 +51,7 @@ header, main, footer {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 5px;
+  padding: 0px;
 }
 
 /*ANCHOR - Content Style*/
@@ -63,6 +65,13 @@ h1 {
 a {
   text-decoration: none;
   font-size: larger;
+}
+
+.news-text {
+  background-color: var(--color-blue);
+  color: #e1e1e1;
+  height: 50px;
+  cursor: pointer;  
 }
 
 #invertButton {
@@ -89,7 +98,7 @@ a {
 
 nav > ul {
   list-style: none;
-  padding: 0;
+  padding: 0px;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -117,12 +126,7 @@ nav > ul {
 
 /* ANCHOR - Scrolling TEXT/Style */ 
 
-.news-text {
-  background-color: var(--color-blue);
-  color: #e1e1e1;
-  height: 50px;
-  cursor: pointer;
-}
+
 
 .news-text:hover {
   animation-play-state: paused;
