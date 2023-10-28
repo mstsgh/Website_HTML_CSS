@@ -11,6 +11,7 @@ body {
   --color-grey-hell: #B9D3EE;
   --color-red: #FF0000;
   --color-blue: #0000FF;
+  --color-blue-hell: #6495ED;
   --font: monospace;
   --font-italic: italic;
   --line: 3ch;
@@ -31,9 +32,9 @@ body.invert {
 }
 
 
+
+
 /*ANCHOR - Main Style*/
-
-
 
 body {
   margin: 5px;
@@ -65,13 +66,6 @@ h1 {
 a {
   text-decoration: none;
   font-size: larger;
-}
-
-.news-text {
-  background-color: var(--color-blue);
-  color: #e1e1e1;
-  height: 50px;
-  cursor: pointer;  
 }
 
 #invertButton {
@@ -126,13 +120,32 @@ nav > ul {
 
 /* ANCHOR - Scrolling TEXT/Style */ 
 
+#news-container {
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: var(--color-blue);
+  cursor: pointer;
+}
 
+#news-text {
+  display: inline-block;
+  padding: 10px;
+  animation: marquee 25s linear infinite;
+  font-size: calc(1.1rem + var(--font-scale));
+  color:#e1e1e1;
+}
 
-.news-text:hover {
+#news-container:hover #news-text {
   animation-play-state: paused;
 }
 
-.marquee {
-  font-size: calc(1.1rem + var(--font-scale));
-  
+@keyframes marquee {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
 }
